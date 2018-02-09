@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import Todo from './Todo'
+import '../index.css'
 class TodoList extends Component {
   static propTypes = {
     todos: PropTypes.arrayOf(PropTypes.object),
@@ -8,7 +9,7 @@ class TodoList extends Component {
   }
   render() {
     return (
-      <div>
+      <div class="todo-list">
         {this.props.todos.map((todo, index) =>
           <Todo {...todo}
                 key={index}

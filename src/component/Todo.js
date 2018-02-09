@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 class Todo extends Component {
   static propTypes = {
-    color: PropTypes.string,
-    textDecoration: PropTypes.string,
     text: PropTypes.string,
     handleTodo: PropTypes.func
   }
   render() {
     const todo  = this.props
+    const color = todo.completed ? 'blue' : 'red'
+    const textDecoration = todo.completed ? 'line-through' : 'underline'
     return (
       <li style={
-                  { color: todo.color,
-                    textDecoration: todo.textDecoration
+                  { color: color,
+                    textDecoration: textDecoration
                   }
                 }
           onClick={() => {todo.handleTodo(todo.index)}}>

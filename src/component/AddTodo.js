@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
+import '../index.css'
 class AddTodo extends Component {
   static propTypes = {
     handleAddTodo: PropTypes.func
@@ -11,7 +12,7 @@ class AddTodo extends Component {
   }
   render() {
     return(
-      <div>
+      <div class="todo-input">
         <input type='text' ref='todo_input'/>
         <button onClick={this.handleAddTodo}>add todo</button>
       </div>
